@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+  .cork{
+    background-image: url('/cork.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .scrollable{
+    overflow-y: auto; /* Use 'auto' instead of 'visible' to enable scrolling */
+    height: calc(100vh - 20vh); /* Subtract the scroll-padding-top value from the viewport height */
+    scroll-padding-top: 20vh;
+  }
+
+  .scrollable::-webkit-scrollbar-track {
+    background-color: transparent; /* Set the scrollbar background to transparent */
+  }
+
+  .scrollable::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Set the scrollbar thumb color */
+    border-radius: 6px; /* Adjust the border-radius as needed */
+  }
+
+  .postit{
+    box-shadow:  -3px 4px 6px rgb(68 27 7 / 74%)    }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
